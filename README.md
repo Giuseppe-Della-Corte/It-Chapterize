@@ -1,8 +1,8 @@
 # It-Chapterize
 
-<a href="https://github.com/JonathanReeve/chapterize">Chapterize</a> by <a href="https://github.com/JonathanReeve">Jonathan Reeve</a> is a command-line tool that breaks up Gutenberg Project English plain text e-books into chapters, removing both the chapter headings and the text not included between them. 
+<a href="https://github.com/JonathanReeve/chapterize">Chapterize</a> by <a href="https://github.com/JonathanReeve">Jonathan Reeve</a> is a command-line tool that breaks up Gutenberg Project **English** plain text e-books into chapters, removing both the chapter headings and the text not included between them. 
 
-**It-Chapterize** is an adaptation of <a href="https://github.com/JonathanReeve/chapterize">Chapterize</a> for the Italian language with additional minor changes concerning the output.
+**It-Chapterize** is an adaptation of <a href="https://github.com/JonathanReeve/chapterize">Chapterize</a> for the **Italian** language with additional minor changes concerning the output.
 
 * [Main Changes](#main-changes)
 * [Installation and Testing](#installation-and-testing)
@@ -11,7 +11,7 @@
  
 ## Main Changes
 - All regular expressions were modified so as to detect the most likely Italian chapters headings
-- Chapter Headings are included at the beginning of each extracted chapter
+- Chapter headings are included at the beginning of each extracted chapter
 - The value of the delta variable for removing chapter headings that are likely to be part of a Table of Contents was increased
 - An additional function removes short detected chapters, that are likely to be false positive chapters/spurious text 
 
