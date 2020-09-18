@@ -1,6 +1,6 @@
 # It-Chapterize
 
-<a href="https://github.com/JonathanReeve/chapterize">Chapterize</a> by <a href="https://github.com/JonathanReeve">Jonathan Reeve</a> is a command-line tool that breaks up Gutenberg Project **English** plain text e-books into chapters, removing both the chapter headings and the text not included between them. 
+<a href="https://github.com/JonathanReeve/chapterize">Chapterize</a> by <a href="https://github.com/JonathanReeve">Jonathan Reeve</a> is a command-line tool that breaks up Gutenberg Project **English** plain text e-books into chapters, removing both the chapter headings and the text not included between headings. 
 
 **It-Chapterize** is an adaptation of <a href="https://github.com/JonathanReeve/chapterize">Chapterize</a> for the **Italian** language with additional minor changes concerning the output.
 
