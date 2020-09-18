@@ -38,13 +38,13 @@ It will output a new directory in the current working directory named `60641-0.t
 
 **It-Chapterize** has also been tested on the Gutenberg Project files that follows this paragraph. It worked relatively well on them, but not perfectly: the output text files include between one and two false positives chapters. In addition, for a few of them, sometimes spurious information are included usually in the first or last detected extracted chapters. Manual correction of false negatives requires around 1/2 minutes per parsed file.  
 
-* 21425 <a href="http://www.gutenberg.org/cache/epub/21425/pg21425.txt">Le rive della Bormida</a>
-* 38338 <a href="http://www.gutenberg.org/files/38338/38338-0.txt">Top</a>
-* 46914 <a href="http://www.gutenberg.org/files/46914/46914-0.txt">Il libro di Don Chisciotte</a>
-* 47786 <a href="http://www.gutenberg.org/files/47786/47786-0.txt">Una Donna</a>
-* 48361 <a href="http://www.gutenberg.org/files/48361/48361-0.txt">In faccia al destino</a>
-* 48779 <a href="http://www.gutenberg.org/files/48779/48779-0.txt">Novelle umoristiche</a>
-* 60586 <a href="http://www.gutenberg.org/files/60586/60586-0.txt">Il fantasma di Canterville e il delitto di Lord Savile</a>
-* 60644 <a href="http://www.gutenberg.org/files/60644/60644-0.txt">I tre moschettieri, vol. IV</a>
-* 62047 <a href="http://www.gutenberg.org/files/62047/62047-0.txt">La libertà</a>
-* 63194 <a href="http://www.gutenberg.org/files/63194/63194-0.txt">Ivanhoe; ossia, Il ritorno del Crociato</a>
+* <a href="http://www.gutenberg.org/cache/epub/21425/pg21425.txt">Le rive della Bormida</a>
+* <a href="http://www.gutenberg.org/files/38338/38338-0.txt">Top</a>
+* <a href="http://www.gutenberg.org/files/46914/46914-0.txt">Il libro di Don Chisciotte</a>
+* <a href="http://www.gutenberg.org/files/47786/47786-0.txt">Una Donna</a>
+* <a href="http://www.gutenberg.org/files/48361/48361-0.txt">In faccia al destino</a>
+* <a href="http://www.gutenberg.org/files/48779/48779-0.txt">Novelle umoristiche</a>
+* <a href="http://www.gutenberg.org/files/60586/60586-0.txt">Il fantasma di Canterville e il delitto di Lord Savile</a>
+* <a href="http://www.gutenberg.org/files/60644/60644-0.txt">I tre moschettieri, vol. IV</a>
+* <a href="http://www.gutenberg.org/files/62047/62047-0.txt">La libertà</a>
+* <a href="http://www.gutenberg.org/files/63194/63194-0.txt">Ivanhoe; ossia, Il ritorno del Crociato</a>
