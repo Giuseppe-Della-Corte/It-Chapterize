@@ -1,94 +1,50 @@
-# Chapterize
+# It-Chapterize
 
-This command-line tool breaks up a plain text book into chapters. 
-It works especially well with Project Gutenberg plain text ebooks.
-It may also be used to strip metatextual text from a book, such as tables of contents, headings, and Project Gutenberg licenses. This may be useful for preparing an ebook for computational text analysis. Just use the --nochapters option.
+<a href="https://github.com/JonathanReeve/chapterize">Chapterize</a> by <a href="https://github.com/JonathanReeve">Jonathan Reeve</a> is a command-line tool that breaks up Gutenberg Project English plain text e-books into chapters, removing both the chapter headings and the text not included between them. 
 
-## Usage
+**It-Chapterize** is an adaptation of <a href="https://github.com/JonathanReeve/chapterize">Chapterize</a> for the Italian language with additional minor changes concerning the output.
 
-### Break a Novel into Chapters: 
+## Main Changes
+- All regular expressions were modified so as to detect the most likely Italian chapters headings
+- Chapter Headings are included at the beginning of each extracted chapter
+- The value of the delta variable for removing chapter headings that are likely to be part of a Table of Contents was increased
+- An additional function removes short detected chapters, that are likely to be false positive chapters/spurious text 
 
+## Installation and Testing
 ```
-# Grab a copy of Pride and Prejudice from Project Gutenberg: 
-wget https://www.gutenberg.org/files/1342/1342-0.txt
+# Clone the repository
+git clone https://github.com/GiuseppeDellaCorte/It-Chapterize.git
 
-# Give it a nicer name. 
-mv pg1342.txt pride-and-prejudice.txt 
+# Grab a copy of "I tre Moschettieri - Volume 1 " from Project Gutenberg: 
+wget https://www.gutenberg.org/files/60641/60641-0.txt
 
-# Run Chapterize on it:  
-chapterize pride-and-prejudice.txt
+# Run It-Chapterize on it as it follows:  
+/path-to/chapterize /path-to/60641-0.txt
 ```
+It will output a new directory in the current working directory named `60641-0.txt-chapters`, containing files ranging from 01.txt to 56.txt.
 
-This should output a directory in the current working directory called `pride-and-prejudice-chapters`, containing files 01.txt through 56.txt. You can then change into that directory, and run text analysis programs, like my [macroetym](https://github.com/JonathanReeve/macro-etym) tool: 
+## State of the Tool
+**It-Chapterize** has been tested on a few set of Italian e-books, which means that the tool does not handle many possible Italian chapter headings.
 
-```
-cd pride-prejudice-chapters
-macroetym *
-```
+## Tested on
+**It-Chapterize** has been tested successfully on these Italian Gutenberg Project files:
 
-This will compare the macroetymologies of all the chapters in _Pride and Prejudice_. 
+* <a href="http://www.gutenberg.org/files/60641/60641-0.txt">I tre moschettieri, vol. I</a>
+* <a href="http://www.gutenberg.org/files/60642/60642-0.txt">I tre moschettieri, vol. II</a>
+* <a href="http://www.gutenberg.org/files/60643/60643-0.txt">I tre moschettieri, vol. III</a>
+* <a href="http://www.gutenberg.org/cache/epub/28371/pg28371.txt">Le avventure d'Alice nel paese delle meraviglie</a>
+* <a href="http://www.gutenberg.org/files/47102/47102-0.txt">L'arte di far debiti</a>
+* <a href="http://www.gutenberg.org/files/58415/58415-0.txt">Una sfida al Polo</a>
 
-### Extract Text from a Book
+**It-Chapterize** has also been tested on the Gutenberg Project files that follows this paragraph. It worked relatively well on them, but not perfectly: the output text files include between one and two false positives chapters. In addition, for a few of them, sometimes spurious information are included usually in the first or last detected extracted chapters. Manual correction of false negatives requires around 1/2 minutes per parsed file.  
 
-```
-# Grab a copy of Pride and Prejudice from Project Gutenberg: 
-wget http://www.gutenberg.org/cache/epub/1342/pg1342.txt
-
-# Give it a nicer name. 
-mv pg1342.txt pride-and-prejudice.txt 
-
-# Run Chapterize on it, setting the --nochapters flag:  
-chapterize pride-and-prejudice.txt --nochapters
-```
-
-This will grab all the text from all the chapters, but will remove titles, chapter headings, Project Gutenberg introductions and licenses, and most other metatext. It will write a file called pride-prejudice-extracted.txt to the current working directory. This could be useful if you want to run a kind of bag-of-words analysis on a text, but don’t want to have to do a lot of data cleanup yourself. 
-
-## Installation 
-
-Chapterize is now on PyPi, installable with `pip`. You can install it with: 
-
-```
-sudo pip3 install chapterize
-```
-
-Or, to get the very latest version from GitHub, run: 
-
-```
-git clone https://github.com/JonathanReeve/chapterize.git
-cd chapterize
-sudo pip3 install .
-```
-
-## State
-
-This tool is in a pre-alpha state. There are a lot of types of chapter headings it can’t recognize. That having been said, if it doesn’t work with your text, please open up an issue here and describe the error messages you’re seeing. Please include a URL to the text you’re using. 
-
-## Tested With
-
-Chapterize has been tested successfully with these Project Gutenberg ebooks. Feel free to add yours to this list if you can get it to work with your text. 
-
-* A Study in Scarlet
-* A Tale of Two Cities
-* Anna Karenina
-* Frankenstein
-* Huckleberry Finn
-* Madame Bovary
-* Middlemarch
-* Moby Dick
-* Oliver Twist
-* Pride and Prejudice
-* The Brothers Karamazov
-* The Call of the Wild
-* The Secret Agent
-* The Turn of the Screw
-* The War of the Worlds
-* The Wind in the Willows
-* This Side of Paradise
-* Through the Looking Glass
-* Treasure Island
-* Uncle Tom’s Cabin
-* Wuthering Heights
-
-## Contributing
-
-Pull requests welcome! Feel free to hack away on it to whatever extent you wish.
+* 21425 <a href="http://www.gutenberg.org/cache/epub/21425/pg21425.txt">Le rive della Bormida</a>
+* 38338 <a href="http://www.gutenberg.org/files/38338/38338-0.txt">Top</a>
+* 46914 <a href="http://www.gutenberg.org/files/46914/46914-0.txt">Il libro di Don Chisciotte</a>
+* 47786 <a href="http://www.gutenberg.org/files/47786/47786-0.txt">Una Donna</a>
+* 48361 <a href="http://www.gutenberg.org/files/48361/48361-0.txt">In faccia al destino</a>
+* 48779 <a href="http://www.gutenberg.org/files/48779/48779-0.txt">Novelle umoristiche</a>
+* 60586 <a href="http://www.gutenberg.org/files/60586/60586-0.txt">Il fantasma di Canterville e il delitto di Lord Savile</a>
+* 60644 <a href="http://www.gutenberg.org/files/60644/60644-0.txt">I tre moschettieri, vol. IV</a>
+* 62047 <a href="http://www.gutenberg.org/files/62047/62047-0.txt">La libertà</a>
+* 63194 <a href="http://www.gutenberg.org/files/63194/63194-0.txt">Ivanhoe; ossia, Il ritorno del Crociato</a>
