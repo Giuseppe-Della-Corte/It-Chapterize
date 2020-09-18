@@ -4,6 +4,11 @@
 
 **It-Chapterize** is an adaptation of <a href="https://github.com/JonathanReeve/chapterize">Chapterize</a> for the Italian language with additional minor changes concerning the output.
 
+* [Main Changes](#main-changes)
+* [Installation and Testing](#installation-and-testing)
+* [State of the Tool](#state-of-the-tool)
+* [Tested on](#tested-on)
+ 
 ## Main Changes
 - All regular expressions were modified so as to detect the most likely Italian chapters headings
 - Chapter Headings are included at the beginning of each extracted chapter
