@@ -9,17 +9,17 @@ if ver[0] < 3:
     instead of pip.""" % version)
 
 setup(
-    name = 'It-Chapterize',
-    packages = ['It-Chapterize'], 
-    version = '0.0.1',
+    name = 'itchapterize',
+    packages = ['itchapterize'], 
+    version = '0.1',
     description = 'A tool for breaking Italian etexts into chapters.',
     author = 'Giuseppe Della Corte',
     author_email = 'giuseppedellacorte95@gmail.com',
     url = 'https://github.com/Giuseppe-Della-Corte/It-Chapterize/', 
     download_url = 'https://github.com/Giuseppe-Della-Corte/It-Chapterize.git',
     install_requires = ['Click'],
-    keywords = ['NLP', 'text', 'chapters', 'Italian],
+    keywords = ['regex', 'regexp', 'regular-expression', 'italian', 'regex-pattern', 'digital-humanities', 'text-processing', 'italian-nlp', 'gutenberg-project'],
     entry_points='''
     [console_scripts]
-    chapterize = chapterize.chapterize:cli''',
+    itchapterize = itchapterize.itchapterize:cli''',
 )
