@@ -9,16 +9,16 @@ if ver[0] < 3:
     instead of pip.""" % version)
 
 setup(
-    name = 'chapterize',
-    packages = ['chapterize'], 
-    version = '0.1.6',
-    description = 'A tool for breaking etexts into chapters.',
-    author = 'Jonathan Reeve',
-    author_email = 'jon.reeve@gmail.com',
-    url = 'https://github.com/JonathanReeve/chapterize', 
-    download_url = 'https://github.com/JonathanReeve/chapterize/tarball/0.1.6',
+    name = 'It-Chapterize',
+    packages = ['It-Chapterize'], 
+    version = '0.0.1',
+    description = 'A tool for breaking Italian etexts into chapters.',
+    author = 'Giuseppe Della Corte',
+    author_email = 'giuseppedellacorte95@gmail.com',
+    url = 'https://github.com/Giuseppe-Della-Corte/It-Chapterize/', 
+    download_url = 'https://github.com/Giuseppe-Della-Corte/It-Chapterize.git',
     install_requires = ['Click'],
-    keywords = ['NLP', 'text', 'chapters'],
+    keywords = ['NLP', 'text', 'chapters', 'Italian],
     entry_points='''
     [console_scripts]
     chapterize = chapterize.chapterize:cli''',
