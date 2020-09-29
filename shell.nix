@@ -4,7 +4,7 @@ with pkgs.glibcLocales;
 with pkgs.python36Packages;
 
 buildPythonPackage rec {
-  name = "chapterize";
+  name = "itchapterize";
   src = ".";
   propagatedBuildInputs = [ click ];
 }
