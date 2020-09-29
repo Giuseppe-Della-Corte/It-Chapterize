@@ -24,7 +24,7 @@ git clone https://github.com/GiuseppeDellaCorte/It-Chapterize.git
 wget https://www.gutenberg.org/files/60641/60641-0.txt
 
 # Run It-Chapterize on it as it follows:  
-/path-to/chapterize /path-to/60641-0.txt
+python /path-to/itchapterize/itchapterize.py /path-to/60641-0.txt
 ```
 It will output a new directory in the current working directory named `60641-0.txt-chapters`, containing files ranging from 01.txt to 16.txt.
 
